@@ -1,6 +1,6 @@
-[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.node?branchName=master)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=128&branchName=master)
+[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.node11?repoName=chef-base-plans%2Fnode11&branchName=davy_1)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=231&repoName=chef-base-plans%2Fnode11&branchName=davy_1)
 
-# node
+# node11
 
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.  See [documentation](https://nodejs.org/en/)
 
@@ -16,15 +16,15 @@ Binary package
 
 Binary packages can be set as runtime or build time dependencies. See [Defining your dependencies](https://www.habitat.sh/docs/developing-packages/developing-packages/#sts=Define%20Your%20Dependencies) for more information.
 
-To add core/node as a dependency, you can add one of the following to your plan file.
+To add core/node11 as a dependency, you can add one of the following to your plan file.
 
 ##### Buildtime Dependency
 
-> pkg_build_deps=(core/node)
+> pkg_build_deps=(core/node11)
 
 ##### Runtime dependency
 
-> pkg_deps=(core/node)
+> pkg_deps=(core/node11)
 
 ### Use as Tool
 
@@ -32,7 +32,7 @@ To add core/node as a dependency, you can add one of the following to your plan 
 
 To install this plan, you should run the following commands to first install, and then link the binaries this plan creates.
 
-``hab pkg install core/node --binlink``
+``hab pkg install core/node11 --binlink``
 
 will add the following binaries to the PATH:
 
@@ -43,19 +43,19 @@ will add the following binaries to the PATH:
 For example:
 
 ```bash
-$ hab pkg install core/node --binlink
-» Installing core/node
-☁ Determining latest version of core/node in the 'stable' channel
-→ Found newer installed version (core/node/12.14.1/20200615164709) than remote version (core/node/12.14.1/20200310024011)
-→ Using core/node/12.14.1/20200615164709
-★ Install of core/node/12.14.1/20200615164709 complete with 0 new packages installed.
-» Binlinking npx from core/node/12.14.1/20200615164709 into /bin
-★ Binlinked npx from core/node/12.14.1/20200615164709 to /bin/npx
-» Binlinking npm from core/node/12.14.1/20200615164709 into /bin
-★ Binlinked npm from core/node/12.14.1/20200615164709 to /bin/npm
-» Binlinking node from core/node/12.14.1/20200615164709 into /bin
-★ Binlinked node from core/node/12.14.1/20200615164709 to /bin/node
-[29][default:/src/node:0]# 
+# hab pkg install core/node11 --binlink
+» Installing core/node11
+☁ Determining latest version of core/node11 in the 'stable' channel
+↓ Downloading core/node11/11.15.0/20200812144127
+☛ Verifying core/node11/11.15.0/20200812144127
+✓ Installed core/node11/11.15.0/20200812144127
+★ Install of core/node11/11.15.0/20200812144127 complete with 7 new packages installed.
+» Binlinking npm from core/node11/11.15.0/20200812144127 into /bin
+★ Binlinked npm from core/node11/11.15.0/20200812144127 to /bin/npm
+» Binlinking node from core/node11/11.15.0/20200812144127 into /bin
+★ Binlinked node from core/node11/11.15.0/20200812144127 to /bin/node
+» Binlinking npx from core/node11/11.15.0/20200812144127 into /bin
+★ Binlinked npx from core/node11/11.15.0/20200812144127 to /bin/npx
 ```
 
 #### Using an example binary
